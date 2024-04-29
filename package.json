@@ -1,18 +1,16 @@
 {
-  "homepage": "https://Varshita-U.github.io/JotSpot",
   "name": "jotspot",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
     "server": "nodemon server.js",
     "client": "cd client && npm run start",
     "client-install": "cd client && npm install",
     "server-install": "npm install",
     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\" ",
-    "jotspot": "concurrently \"npm run client\" \"npm run server\" "
+    "jotspot": "concurrently \"npm run client\" \"npm run server\" ",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
