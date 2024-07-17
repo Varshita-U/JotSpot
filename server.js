@@ -16,10 +16,7 @@ app.use('/api/notes', noteRouter)
 
 //connect to MongoDB
 const URI =  process.env.MONGODB_URL
-mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(URI)
 .then(() => {
   console.log('Connected to MongoDB');
 })
